@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manifiesto Electrónico de Carga</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        margin: 0;
+        padding: 0;
+      }
+      .contimgs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 28%;
+        /* background: #eee; */
+      }
+      .imgone {
+        width: 290px;
+        height: 90px;
+        object-fit: contain;
+      }
+      .imgtwo {
+        width: 200px;
+        height: 200px;
+      }
+
+      .qrcontainer {
+        /* background: #eee; */
+        display: flex;
+
+        width: 44%;
+      }
+
+      .qr-one {
+        width: 60%;
+        /* height: 100%; */
+        display: flex;
+        padding: 20px;
+        /* background-color: aqua; */
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .qr-one .infomanifest {
+        width: 100%;
+        /* background-color: black; */
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        background-color: rgb(205, 205, 205);
+        padding: 10px;
+      }
+
+      .infomanifest span {
+        font-weight: bold;
+      }
+
+      .qr-one p {
+        font-size: 10px;
+      }
+
+      .qr-two {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        /* background-color: blue; */
+        justify-content: end;
+        align-items: center;
+      }
+
+      .imgthree {
+        width: 120px;
+        height: 90px;
+      }
+
+      .conttest {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        width: 100%;
+        border: 1px solid black;
+        padding: 10px;
+      }
+
+      .driver_info {
+        width: 100%;
+        /* height: 290px; */
+        /* background: #eee; */
+        /* margin-bottom: 20px; */
+      }
+
+      .di_table {
+        width: 100%;
+        height: 100%;
+        /* justify-content: end;
+        align-items: flex-end; */
+        border: 1px solid black;
+      }
+
+      .row {
+        width: 100%;
+        /* height: 20%; */
+        /* background-color: blue; */
+        display: flex;
+        /* flex-direction: column; */
+        /* border: 1px solid black; */
+      }
+
+      .di_row_cont {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+
+      .di_row_one_cont_one {
+        width: 23%;
+      }
+
+      .di_row_one_cont_two {
+        width: 17%;
+      }
+
+      .di_row_one_cont_three {
+        width: 18%;
+      }
+
+      .di_row_one_cont_fourth {
+        width: 17%;
+      }
+
+      .di_row_one_cont_five {
+        width: 25%;
+      }
+
+      .di_row_two_cont_one {
+        width: 7%;
+      }
+
+      .di_row_two_cont_two {
+        width: 9%;
+      }
+
+      .di_row_two_cont_three {
+        width: 11%;
+      }
+
+      .di_row_two_cont_fourth {
+        width: 9%;
+      }
+
+      .di_row_two_cont_five {
+        width: 17%;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        padding-bottom: 13px;
+      }
+
+      .di_row_two_cont_five div:first-child {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .di_row_two_cont_five div:last-child {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .di_row_two_cont_six {
+        width: 11%;
+      }
+
+      .di_row_two_cont_seven {
+        width: 23%;
+      }
+
+      .di_row_two_cont_eight {
+        width: 11%;
+      }
+
+      .th {
+        font-size: 11px;
+      }
+
+      .di_row_three_cont_one {
+        width: 23%;
+      }
+
+      .di_row_three_cont_two {
+        width: 17%;
+      }
+
+      .di_row_three_cont_three {
+        width: 18%;
+      }
+
+      .di_row_three_cont_fourth {
+        width: 11%;
+      }
+
+      .di_row_three_cont_five {
+        width: 14%;
+      }
+
+      .di_row_three_cont_six {
+        width: 16%;
+      }
+
+      .di_row_fourth_cont_one {
+        width: 23%;
+      }
+
+      .di_row_fourth_cont_two {
+        width: 17%;
+      }
+
+      .di_row_fourth_cont_three {
+        width: 18%;
+      }
+
+      .di_row_fourth_cont_fourth {
+        width: 11%;
+      }
+
+      .di_row_fourth_cont_five {
+        width: 14%;
+      }
+
+      .di_row_fourth_cont_six {
+        width: 16%;
+      }
+
+      .di_row_five_cont_one {
+        width: 23%;
+      }
+
+      .di_row_five_cont_two {
+        width: 17%;
+      }
+
+      .di_row_five_cont_three {
+        width: 18%;
+      }
+
+      .di_row_five_cont_fourth {
+        width: 17%;
+      }
+
+      .di_row_five_cont_five {
+        width: 25%;
+      }
+
+      .mi_headerOne {
+        width: 100%;
+        display: flex;
+        /* background: blue; */
+        /* padding: 5px; */
+        border: 1px solid black;
+      }
+
+      .mi_header {
+        border: 1px solid black;
+        padding: 4px 0 4px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mi_headerOne_one {
+        width: 50%;
+        height: 100%;
+      }
+
+      .mi_headerOne_two {
+        width: 20%;
+        height: 100%;
+      }
+
+      .mi_headerOne_three {
+        width: 20%;
+        height: 100%;
+      }
+
+      .mi_headerOne_fourth {
+        width: 10%;
+        height: 100%;
+      }
+
+      .mi_table {
+        width: 100%;
+      }
+
+      .mi_table td {
+        padding: 5px 6px 5px 6px;
+        min-height: 33px;
+        max-height: 52px;
+      }
+
+      .mi_table td div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .mi_table_header {
+        width: 100%;
+      }
+
+      .mi_table_header th {
+        text-align: center;
+        padding: 4px 0 4px 0;
+        /* border: 2px solid black; */
+      }
+
+      .mi_table_header th:first-child {
+        width: 8%;
+      }
+
+      .mi_table_header th:nth-child(2),
+      th:nth-child(3),
+      th:nth-child(4),
+      th:nth-child(6),
+      th:nth-child(8) {
+        width: 8%;
+      }
+
+      .mi_table_header th:nth-child(5) {
+        width: 18%;
+      }
+
+      .mi_table_header th:nth-child(7),
+      th:nth-child(9) {
+        width: 12%;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        /* padding: 5px; */
+        text-align: left;
+      }
+      .header {
+        margin-top: 10px;
+        width: 28%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .logo {
+        display: flex;
+        margin-bottom: 20px;
+      }
+      .section-title {
+        background-color: #ddd;
+        text-align: center;
+        font-weight: bold;
+        padding: 5px;
+      }
+      .observations {
+        font-size: 10px;
+      }
+      .small-text {
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <div class="contimgs">
+          <img
+            src="./img/111-1-removebg-preview.png"
+            alt="Logo MinTransporte"
+            class="imgone"
+          />
+          <div class="conttest">
+            <img
+              src="./img/nuevo_logo_supertransporte_3_0-removebg-preview.png"
+              alt="st"
+              class="imgthree"
+            />
+          </div>
+        </div>
+        <div class="header">
+          <h2>MANIFIESTO ELECTRONICO DE CARGA</h2>
+
+          <strong>QUICK HELP S.A.S</strong>
+          <strong>NIT: 8301247785</strong>
+          <span>TV 93 # 51-98 UND 24</span>
+          <span>TEL: 7470547</span>
+          <span>CARTAGENA - BOLIVAR</span>
+        </div>
+        <div class="qrcontainer">
+          <div class="qr-one">
+            <div>
+              <p>
+                "La impresión en soporte cartular (papel) de este acto
+                administrativo producido por medios electrónicos en cumplimiento
+                de la ley 527 de 1999 (Articulos 6 a 13) y de la ley 962 de 2005
+                (Articulo 6), es una reproducción del documento original que se
+                encuentra en formato electrónico, cuya representación digital
+                goza de autenticidad, integridad y no repudio"
+              </p>
+            </div>
+            <div class="infomanifest">
+              <span>Manifiesto: 0102014055 - 983027</span>
+              <span>Autorización: 95231375</span>
+            </div>
+          </div>
+          <div class="qr-two">
+            <img
+              src="./img/image.png"
+              alt="Logo ST"
+              width="100"
+              class="imgtwo"
+            />
+          </div>
+        </div>
+      </div>
+
+      <table>
+        <tr>
+          <th>Fecha de Expedición</th>
+          <td>2024/sep/17</td>
+          <th>Tipo Manifiesto</th>
+          <td>MANIFIESTO GENERAL</td>
+        </tr>
+        <tr>
+          <th>Origen del Viaje</th>
+          <td>CARTAGENA - BOLIVAR</td>
+          <th>Destino Final del Viaje</th>
+          <td>BOGOTA - SANTA FE DE BOGOTA D.C.</td>
+        </tr>
+      </table>
+
+      <p class="section-title">INFORMACIÓN DEL VEHÍCULO Y CONDUCTOR</p>
+      <section class="driver_info">
+        <table class="di_table">
+          <tr class="row di_row_one">
+            <td class="di_row_cont di_row_one_cont_one">
+              <span class="th"><strong>TITULAR DEL MANIFIESTO</strong></span>
+              <span>DELFIN CORTES MAHECHA</span>
+            </td>
+            <td class="di_row_cont di_row_one_cont_two">
+              <span class="th"><strong>DOCUMENTO</strong></span>
+              <span>79001516</span>
+            </td>
+            <td class="di_row_cont di_row_one_cont_three">
+              <span class="th"><strong>DIRECCION</strong></span>
+              <span>CALLE 1 N 05 07</span>
+            </td>
+            <td class="di_row_cont di_row_one_cont_fourth">
+              <span class="th"><strong>TELEFONO</strong></span>
+              <span>3124810248</span>
+            </td>
+            <td
+              class="di_row_cont di_row_one_cont_five"
+              id="di_row_one_cont_five"
+            >
+              <span class="th"><strong>CIUDAD</strong></span>
+              <span>GUADUAS - CUNDINAMARCA</span>
+            </td>
+          </tr>
+          <tr class="row di_row_two">
+            <td class="di_row_cont di_row_two_cont_one">
+              <span class="th"><strong>PLACA</strong></span>
+              <span>TAL968</span>
+            </td>
+            <td class="di_row_cont di_row_two_cont_two">
+              <span class="th"><strong>MARCA</strong></span>
+              <span>KENWORTH</span>
+            </td>
+            <td class="di_row_cont di_row_two_cont_three">
+              <span class="th"><strong>PLACA SEMIREMOLQUE</strong></span>
+              <span>S61583</span>
+            </td>
+            <td class="di_row_cont di_row_two_cont_fourth">
+              <span class="th"><strong>CONFIGURACION</strong></span>
+              <span>3S2</span>
+            </td>
+            <td class="di_row_cont di_row_two_cont_five">
+              <div>
+                <span class="th"><strong>Peso vacio</strong></span>
+                <span>9.000</span>
+              </div>
+              <div>
+                <span class="th"><strong>PesoVacioRemolqu</strong></span>
+                <span>9.000</span>
+              </div>
+            </td>
+            <td class="di_row_cont di_row_two_cont_six">
+              <span class="th"><strong>No. POLIZA</strong></span>
+              <span>39019054</span>
+            </td>
+            <td class="di_row_cont di_row_two_cont_seven">
+              <span class="th"><strong>COMPAÑIA SEGUROS SOAT</strong></span>
+              <span>SEGUROS GENERALES SUDAMERICANA</span>
+            </td>
+            <td class="di_row_cont di_row_two_cont_eight">
+              <span class="th"><strong>F.Vencim/SOAT</strong></span>
+              <span>2025/04/14</span>
+            </td>
+          </tr>
+          <tr class="row di_row_three">
+            <td class="di_row_cont di_row_three_cont_one">
+              <span class="th"><strong>CONDUCTOR</strong></span>
+              <span>DELFIN CORTES MAHECHA</span>
+            </td>
+            <td class="di_row_cont di_row_three_cont_two">
+              <span class="th"><strong>DOCUMENTO</strong></span>
+              <span>79001516</span>
+            </td>
+            <td class="di_row_cont di_row_three_cont_three">
+              <span class="th"><strong>DIRECCION</strong></span>
+              <span>CALLE 1 N 05 07</span>
+            </td>
+            <td class="di_row_cont di_row_three_cont_fourth">
+              <span class="th"><strong>TELEFONO</strong></span>
+              <span>3124810248</span>
+            </td>
+            <td class="di_row_cont di_row_three_cont_five">
+              <span class="th"><strong>No de LICENCIA</strong></span>
+              <span>C3-79001516</span>
+            </td>
+            <td class="di_row_cont di_row_three_cont_six">
+              <span class="th"><strong>CIUDAD</strong></span>
+              <span>GUADUAS - CUNDINAMARCA</span>
+            </td>
+          </tr>
+          <tr class="row di_row_fourth">
+            <td class="di_row_cont di_row_fourth_cont_one">
+              <span class="th"><strong>CONDUCTOR NRO 2</strong></span>
+              <span>DELFIN CORTES MAHECHA</span>
+            </td>
+            <td class="di_row_cont di_row_fourth_cont_two">
+              <span class="th"><strong>DOCUMENTO</strong></span>
+              <span>79001516</span>
+            </td>
+            <td class="di_row_cont di_row_fourth_cont_three">
+              <span class="th"><strong>DIRECCION CONDUCTOR 2</strong></span>
+              <span>CALLE 1 N 05 07</span>
+            </td>
+            <td class="di_row_cont di_row_fourth_cont_fourth">
+              <span class="th"><strong>TELEFONO</strong></span>
+              <span>3124810248</span>
+            </td>
+            <td class="di_row_cont di_row_fourth_cont_five">
+              <span class="th"><strong>No de LICENCIA</strong></span>
+              <span>C3-79001516</span>
+            </td>
+            <td class="di_row_cont di_row_fourth_cont_six">
+              <span class="th"><strong>CIUDAD CONDUCTOR 2</strong></span>
+              <span>GUADUAS - CUNDINAMARCA</span>
+            </td>
+          </tr>
+          <tr class="row di_row_five">
+            <td class="di_row_cont di_row_five_cont_one">
+              <span class="th"
+                ><strong>POSEEDOR O TENEDOR VEHICULO </strong></span
+              >
+              <span>DELFIN CORTES MAHECHA</span>
+            </td>
+            <td class="di_row_cont di_row_five_cont_two">
+              <span class="th"><strong>DOCUMENTO</strong></span>
+              <span>79001516</span>
+            </td>
+            <td class="di_row_cont di_row_five_cont_three">
+              <span class="th"><strong>DIRECCION CONDUCTOR 2</strong></span>
+              <span>CALLE 1 N 05 07</span>
+            </td>
+            <td class="di_row_cont di_row_five_cont_fourth">
+              <span class="th"><strong>TELEFONO</strong></span>
+              <span>3124810248</span>
+            </td>
+
+            <td class="di_row_cont di_row_five_cont_five">
+              <span class="th"><strong>CIUDAD CONDUCTOR 2</strong></span>
+              <span>GUADUAS - CUNDINAMARCA</span>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <p class="section-title">INFORMACIÓN DE LA MERCANCÍA TRANSPORTADA</p>
+      <section class="merchanside_info">
+        <div class="mi_headerOne">
+          <div class="mi_header mi_headerOne_one">
+            <span>Informacion Mercancia</span>
+          </div>
+          <div class="mi_header mi_headerOne_two">Informacion Remitente</div>
+          <div class="mi_header mi_headerOne_three">
+            Informacion destinatario
+          </div>
+          <div class="mi_header mi_headerOne_fourth">Dueño Poliza</div>
+        </div>
+        <table class="mi_table">
+          <tr class="mi_table_header">
+            <th>Nro Remesa</th>
+            <th>Unidad Medida</th>
+            <th>Cantidad</th>
+            <th>Naturaleza</th>
+            <th>Empaque = producto transportado</th>
+            <th>NIT/CC</th>
+            <th>Nombre/Razon Social</th>
+            <th>NIT/CC</th>
+            <th>Nombre/Razon Social</th>
+            <th>Dueño poliza</th>
+          </tr>
+          <!-- Por cada producto, saldra una fila (tr -> td) -->
+          <tr>
+            <td><div>0102017491</div></td>
+            <td><div>Kg</div></td>
+            <td><div>11.000</div></td>
+            <td><div>NORMAL</div></td>
+            <td>
+              <div>
+                CONTENEDOR 008207 DE 40 UTILES INTERCAMBIABLES PARA HERRAMIENTAS
+                DE MANO, INCLUSO
+              </div>
+            </td>
+            <td><div>1234567890</div></td>
+            <td><div>CONTECAR</div></td>
+            <td><div>901731279</div></td>
+            <td><div>FILMTEX - BOGOTA</div></td>
+            <td><div>QUICK HELP S.A.S</div></td>
+          </tr>
+        </table>
+      </section>
+
+      <p class="section-title">VALORES</p>
+      <table>
+        <tr>
+          <th>Valor Total del Viaje</th>
+          <td>4,800,000.00</td>
+          <th>Retención en la Fuente</th>
+          <td>48,000.00</td>
+        </tr>
+        <tr>
+          <th>Retención ICA</th>
+          <td>41,088.00</td>
+          <th>Valor Neto a Pagar</th>
+          <td>4,710,912.00</td>
+        </tr>
+        <tr>
+          <th>Valor Anticipo</th>
+          <td>3,360,000.00</td>
+          <th>Saldo a Pagar</th>
+          <td>1,350,912.00</td>
+        </tr>
+      </table>
+
+      <p class="section-title">OBSERVACIONES</p>
+      <p class="small-text">
+        CLASE VEHÍCULO: TRACTOMULA<br />
+        Anticipo Viaje: $ 3360000 Egreso Caja No: 01020414141 Anticipo
+        Operacion: $ moneda: PESOS <br />
+        Cartagena - Bogotá Unidad 40'/DC: 35300 // OC FTX008586 // SAPPI <br />
+        Si es víctima de algún fraude o conoce de alguna irregularidad en el
+        Registro Nacional de Despachos de Carga RNDC denuncie a la
+        Superintendencia de Puertos y Transporte en la línea gratuita nacional
+        018000 915615 y a través del correo electrónico:
+        atencionalciudadano@supertransporte.gov.co
+      </p>
+
+      <div class="logo">
+        <img src="firma1.png" alt="Firma Titular del Manifiesto" width="150" />
+        <p>FIRMA Y HUELLA TITULAR DEL MANIFIESTO</p>
+        <img src="firma2.png" alt="Firma Conductor" width="150" />
+        <p>FIRMA Y HUELLA DEL CONDUCTOR</p>
+      </div>
+    </div>
+  </body>
+</html>
