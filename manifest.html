@@ -54,6 +54,7 @@
         gap: 13px;
         background-color: rgb(205, 205, 205);
         padding: 10px;
+        border-radius: 5px;
       }
 
       .infomanifest span {
@@ -69,7 +70,7 @@
         height: 100%;
         display: flex;
         /* background-color: blue; */
-        justify-content: end;
+        justify-content: center;
         align-items: center;
       }
 
@@ -345,6 +346,221 @@
         width: 12%;
       }
 
+      .values {
+        width: 100%;
+        height: 300px;
+        /* background-color: aqua; */
+      }
+
+      .colcont {
+        width: 100%;
+        height: 50%;
+        display: flex;
+      }
+
+      /* .column {
+        border: 1px solid black;
+      } */
+
+      .values .column_one {
+        width: 30%;
+
+        height: 100%;
+      }
+
+      .column_one table {
+        border: none;
+        height: 100%;
+      }
+
+      .column_one table tr th {
+        text-align: center;
+        font-size: smaller;
+      }
+
+      .column_one table td {
+        text-align: right;
+        padding: 5px 4px 5px 4px;
+      }
+
+      .values .column_two {
+        width: 33%;
+        height: 100%;
+        border-top: 1px solid #000;
+        /* border-bottom: 1px solid black; */
+      }
+
+      .column_two .column_two_first_container {
+        width: 100%;
+        display: flex;
+        height: 30%;
+      }
+
+      .first_container_one {
+        width: 60%;
+        height: 100%;
+        display: flex;
+      }
+
+      .first_container_one div:first-child {
+        width: 37%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+      }
+
+      .first_container_one div:last-child {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+      }
+
+      .first_container_two {
+        width: 40%;
+        height: 100%;
+        display: flex;
+      }
+
+      .first_container_two div:first-child {
+        width: 37%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+      }
+
+      .first_container_two div:last-child {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+      }
+
+      .column_two_second_container {
+        width: 100%;
+        height: 70%;
+      }
+
+      .second_container_one {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .second_container_one div:first-child {
+        width: 95%;
+        height: 40%;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .second_container_one div:last-child {
+        width: 95%;
+        height: 40%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* padding: 0 10px 0 10px; */
+      }
+
+      .second_container_two {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .second_container_two div:first-child {
+        width: 95%;
+        height: 40%;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .second_container_two div:last-child {
+        width: 95%;
+        height: 40%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* padding: 0 10px 0 10px; */
+      }
+
+      .values .column_three {
+        width: 37%;
+        height: 100%;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .column_three div {
+        width: 95%;
+        height: 95%;
+      }
+
+      .secondsection {
+        width: 100%;
+        height: 50%;
+      }
+
+      .total_value {
+        width: 100%;
+        height: 17%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        border: 1px solid black;
+      }
+
+      .extra {
+        width: 100%;
+        height: 83%;
+        display: flex;
+      }
+
+      .extra .first {
+        width: 50.3%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* padding-top: 10px; */
+        border: 1px solid black;
+      }
+
+      .extra .first div {
+        width: 98%;
+        height: 90%;
+      }
+
+      .extra .second, .third {
+        width: 25%;
+        height: 100%;
+        /* padding-top: 5px; */
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+      }
+
+      .extra .second span, .third span {
+        margin-top: 10px;
+      }
+
       table {
         width: 100%;
         border-collapse: collapse;
@@ -582,7 +798,7 @@
               <span>79001516</span>
             </td>
             <td class="di_row_cont di_row_five_cont_three">
-              <span class="th"><strong>DIRECCION CONDUCTOR 2</strong></span>
+              <span class="th"><strong>DIRECCION</strong></span>
               <span>CALLE 1 N 05 07</span>
             </td>
             <td class="di_row_cont di_row_five_cont_fourth">
@@ -591,7 +807,7 @@
             </td>
 
             <td class="di_row_cont di_row_five_cont_five">
-              <span class="th"><strong>CIUDAD CONDUCTOR 2</strong></span>
+              <span class="th"><strong>CIUDAD</strong></span>
               <span>GUADUAS - CUNDINAMARCA</span>
             </td>
           </tr>
@@ -644,47 +860,108 @@
         </table>
       </section>
 
-      <p class="section-title">VALORES</p>
-      <table>
-        <tr>
-          <th>Valor Total del Viaje</th>
-          <td>4,800,000.00</td>
-          <th>Retención en la Fuente</th>
-          <td>48,000.00</td>
-        </tr>
-        <tr>
-          <th>Retención ICA</th>
-          <td>41,088.00</td>
-          <th>Valor Neto a Pagar</th>
-          <td>4,710,912.00</td>
-        </tr>
-        <tr>
-          <th>Valor Anticipo</th>
-          <td>3,360,000.00</td>
-          <th>Saldo a Pagar</th>
-          <td>1,350,912.00</td>
-        </tr>
-      </table>
-
-      <p class="section-title">OBSERVACIONES</p>
-      <p class="small-text">
-        CLASE VEHÍCULO: TRACTOMULA<br />
-        Anticipo Viaje: $ 3360000 Egreso Caja No: 01020414141 Anticipo
-        Operacion: $ moneda: PESOS <br />
-        Cartagena - Bogotá Unidad 40'/DC: 35300 // OC FTX008586 // SAPPI <br />
-        Si es víctima de algún fraude o conoce de alguna irregularidad en el
-        Registro Nacional de Despachos de Carga RNDC denuncie a la
-        Superintendencia de Puertos y Transporte en la línea gratuita nacional
-        018000 915615 y a través del correo electrónico:
-        atencionalciudadano@supertransporte.gov.co
-      </p>
-
-      <div class="logo">
-        <img src="firma1.png" alt="Firma Titular del Manifiesto" width="150" />
-        <p>FIRMA Y HUELLA TITULAR DEL MANIFIESTO</p>
-        <img src="firma2.png" alt="Firma Conductor" width="150" />
-        <p>FIRMA Y HUELLA DEL CONDUCTOR</p>
-      </div>
+      <p class="section-title">VALORES Y OBSERVACIONES</p>
+      <section class="values">
+        <section class="colcont">
+          <article class="column column_one">
+            <table>
+              <tr>
+                <th>VALOR TOTAL DEL VIAJE</th>
+                <td>4.800.000,00</td>
+              </tr>
+              <tr>
+                <th>RETENCIÓN EN LA FUENTE</th>
+                <td>48.000,00</td>
+              </tr>
+              <tr>
+                <th>RETENCIÓN ICA</th>
+                <td>41.088,00</td>
+              </tr>
+              <tr>
+                <th>VALOR NETO A PAGAR</th>
+                <td>4.710.912,00</td>
+              </tr>
+              <tr>
+                <th>VALOR ANTICIPO</th>
+                <td>3.360.000,00</td>
+              </tr>
+              <tr>
+                <th>SALDO A PAGAR</th>
+                <td>1.350.912,00</td>
+              </tr>
+            </table>
+          </article>
+          <article class="column column_two">
+            <div class="column_two_first_container">
+              <div class="first_container_one">
+                <div>
+                  <span>LUGAR DE PAGO</span>
+                </div>
+                <div>
+                  <span>CARTAGENA</span>
+                </div>
+              </div>
+              <div class="first_container_two">
+                <div>
+                  <span>FECHA</span>
+                </div>
+                <div>
+                  <span>2024/09/29</span>
+                </div>
+              </div>
+            </div>
+            <div class="column_two_second_container">
+              <div class="second_container_one">
+                <div>
+                  <span>CARGUE PAGADO POR</span>
+                </div>
+                <div><span>REMITENTE</span></div>
+              </div>
+              <div class="second_container_two">
+                <div>
+                  <span>DESCARGUE PAGADO POR</span>
+                </div>
+                <div><span>DESTINATARIO</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="column column_three">
+            <div>
+              <p>
+                CLASE VEHICULO: TRACTOMULA Anticipo Viaje: $ 3360000 Egreso Caja
+                No: 0102014141 Anticipo Operacion: $ moneda: PESOS
+                CXD//8584733/// CARTAGENA//BOGOTA UNIDAD 40"//DO: 35300 // OC
+                FTX008598 // IFTX2408056 // SAPPI
+              </p>
+            </div>
+          </article>
+        </section>
+        <section class="secondsection">
+          <article class="total_value">
+            <span
+              >VALOR TOTAL DEL VIAJE EN LETRAS: CUATRO MILLONES OCHOCIENTOS MIL
+              PESOS</span
+            >
+          </article>
+          <article class="extra">
+            <div class="first">
+              <div>
+                Si es víctima de algún fraude o conoce de alguna irregularidad
+                en el Registro Nacional de Despachos de Carga RNDC denúncielo a
+                la Superintendencia de Puertos y Transporte, en la línea
+                gratuita nacional 018000 915615 y a través del correo
+                electrónico: atencionciudadano@supertransporte.gov.c
+              </div>
+            </div>
+            <div class="second">
+              <span>FIRMA Y HUELLA TITULAR DEL MANIFIESTO</span>
+            </div>
+            <div class="third">
+              <span>FIRMA Y HUELLA DEL CONDUCTOR</span>
+            </div>
+          </article>
+        </section>
+      </section>
     </div>
   </body>
 </html>
