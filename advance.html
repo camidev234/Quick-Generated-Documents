@@ -1,168 +1,512 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vale de Movimiento</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 12px;
-            margin: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 5px;
-            text-align: left;
-        }
-        .logo {
-            text-align: left;
-            padding: 10px;
-        }
-        .header-info {
-            text-align: right;
-        }
-        .title {
-            text-align: center;
-            font-weight: bold;
-            font-size: 14px;
-        }
-        .footer {
-            font-size: 10px;
-            text-align: center;
-        }
-        .observaciones {
-            font-size: 10px;
-            text-align: left;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        width: 70%;
+        /* height: 80%; */
+        /* background-color: blue; */
+        border: 1px solid black;
+        padding: 5px;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      .first_section {
+        display: flex;
+        height: 157px;
+      }
+
+      .fs_one {
+        width: 50%;
+      }
+
+      .fs_two {
+        width: 50%;
+        height: 100%;
+        /* background-color: burlywood; */
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .fs_two_one {
+        display: flex;
+        /* background-color: yellow; */
+        width: 40%;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+
+      .fs_two_one div:first-child {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        height: 30%;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        gap: 3px;
+      }
+
+      .fs_two_one div:last-child {
+        width: 50%;
+        height: 30%;
+        /* background-color: tomato; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+      }
+
+      .fs_two_two {
+        width: 30%;
+        /* height: 10%; */
+        /* display: flex; */
+      }
+
+      .fs_two_two div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        /* background-color: rgb(39, 100, 100); */
+        padding-left: 10px;
+        border: 1px solid black;
+        margin-top: 84px;
+      }
+
+      .second_section {
+        width: 100%;
+        margin-top: 20px;
+        border: 1px solid black;
+      }
+
+      .row {
+        width: 100%;
+        display: flex;
+        /* background-color: yellow; */
+      }
+
+      .row_one_one {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid black;
+        display: flex;
+        gap: 10px;
+      }
+
+      .row_one_two {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid black;
+        display: flex;
+        gap: 10px;
+      }
+
+      .row_two_one {
+        width: 50%;
+        padding: 10px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        display: flex;
+        gap: 10px;
+      }
+
+      .row_two_two {
+        width: 50%;
+        padding: 10px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        display: flex;
+        gap: 10px;
+      }
+
+      .row_three_one {
+        width: 33.3%;
+        padding: 10px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        display: flex;
+        gap: 10px;
+      }
+
+      .row_three_two {
+        width: 33.3%;
+        padding: 10px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        display: flex;
+        gap: 10px;
+      }
+
+      .row_three_three {
+        width: 33.3%;
+        padding: 10px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        display: flex;
+        gap: 10px;
+      }
+
+      .row_fourth_one {
+        width: 100%;
+        padding: 10px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
+        display: flex;
+        gap: 10px;
+      }
+
+      .third_section {
+        border: 1px solid black;
+        margin-top: 20px;
+        height: 70px;
+        /* background-color: aqua; */
+        display: flex;
+      }
+
+      .third_section .column {
+        width: 33.3%;
+        height: 100%;
+        border: 1px solid black;
+        
+      }
+
+      .column_one {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .column_one div {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .column_two {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .column_two div {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .column_three {
+        display: flex;
+      }
+
+      .column_three .column_three_one {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .column_three .column_three_two {
+        width: 80%; 
+        /* background-color: blue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 5px;
+      }
+
+      .column_three_two div {
+        width: 95%;
+        height: 1px;
+        border-bottom: 1px solid black;
+      }
+
+      .third_section .column_three_two span {
+        margin-bottom: 10px;
+      }
+
+      .fourth_section {
+        margin-top: 11px;
+        display: flex;
+        width: 100%;
+        height: 70px;  
+      }
+
+      .fourth_section .column {
+        width: 33.3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .five_section {
+        width: 100%;
+        height: 60px;
+        border: 1px solid black;
+      }
+
+      .five_section article {
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+      }
+
+      .six_section {
+        width: 100%;
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+
+      .six_section .ss_row {
+        width: 50%;
+        display: flex;
+        gap: 13px;
+      }
+
+      .line_one {
+        width: 230px;
+        border-bottom: 2px solid black;
+      }
+
+      .line {
+        width: 295px;
+        border-bottom: 2px solid black;
+      }
+
+      .six_section .ss_row_one {
+        display: flex;
+        flex-direction: column;
+      } 
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: left;
+      }
+      .logo {
+        text-align: left;
+        padding: 10px;
+      }
+      .header-info {
+        text-align: right;
+      }
+      .title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      .footer {
+        font-size: 10px;
+        text-align: center;
+      }
+      .observaciones {
+        font-size: 10px;
+        text-align: left;
+      }
     </style>
-</head>
-<body>
-
-    <table>
-        <tr>
-            <td colspan="2" class="logo">
-                <img src="logo-quick.png" alt="Logo Quick" height="50">
-            </td>
-            <td colspan="4" class="header-info">
-                <strong>VALE</strong><br>
-                No. 0102014141<br>
-                FECHA DE<br>17/09/2024
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                Nit. 8301247785
-            </td>
-            <td colspan="2">
-                <strong>MOVIMIENTO</strong><br>983027
-            </td>
-            <td colspan="2">
-                <strong>CAJA</strong>
-            </td>
-        </tr>
-        <tr>
-            <td><strong>EMPRESA</strong></td>
-            <td>QUICK HELP S.A.S</td>
-            <td><strong>OFICINA</strong></td>
-            <td>CARTAGENA</td>
-        </tr>
-        <tr>
-            <td><strong>BENEFICIARIO</strong></td>
-            <td>DELFIN CORTES MAHECHA</td>
-            <td><strong>CEDULA</strong></td>
-            <td>79001516</td>
-        </tr>
-        <tr>
-            <td><strong>POSEEDOR</strong></td>
-            <td>DELFIN CORTES MAHECHA</td>
-            <td><strong>CEDULA</strong></td>
-            <td>79001516</td>
-        </tr>
-        <tr>
-            <td><strong>DESCRIPCION</strong></td>
-            <td colspan="5">
-                CXD///8584733/// CARTAGENA/BOGOTA UNIDAD 40"//DO: 35300 // OC FTX008598 // IFTX2408056 // SAPPI
-            </td>
-        </tr>
-        <tr>
-            <td><strong>CUENTA</strong></td>
-            <td><strong>CENTRO</strong></td>
-            <td><strong>DOCUMENTO</strong></td>
-            <td><strong>TERCERO</strong></td>
-            <td><strong>CONCEPTO</strong></td>
-            <td><strong>DEBITO</strong></td>
-            <td><strong>CREDITO</strong></td>
-        </tr>
-        <tr>
-            <td>11051017</td>
-            <td>02</td>
-            <td>CEDULA - 79001516</td>
-            <td>DELFIN CORTES MAHECHA</td>
-            <td>CXD///8584733///</td>
-            <td>3.360.000</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>13300502</td>
-            <td>02</td>
-            <td>CEDULA - 79001516</td>
-            <td>DELFIN CORTES MAHECHA</td>
-            <td>CXD///8584733///</td>
-            <td></td>
-            <td>3.360.000</td>
-        </tr>
-    </table>
-
-    <br><br>
-
-    <table>
-        <tr>
-            <td><strong>ELABORO</strong></td>
-            <td>JENK SARQUIS PISCIOTTI</td>
-            <td><strong>REVISO</strong></td>
-            <td></td>
-            <td><strong>FIRMA</strong></td>
-            <td></td>
-            <td><strong>C.C. O NIT</strong></td>
-        </tr>
-        <tr>
-            <td><strong>VECES IMPRESO</strong></td>
-            <td></td>
-            <td><strong>FECHA DE IMPRESION</strong></td>
-            <td>2024-09-17</td>
-            <td><strong>HORA DE IMPRESION</strong></td>
-            <td>5.37 PM</td>
-        </tr>
-    </table>
-
-    <p class="observaciones">
-        El abajo firmante acepta libre y voluntariamente que en caso de anulación del documento posterior al pago, deberá realizar el reintegro a la compañía, de lo contrario, se realizará el descuento por nómina de los saldos anteriormente mencionados.
-    </p>
-
-    <br><br>
-
-    <table>
-        <tr>
-            <td>Nombre y Apellido:</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>(Quien Elabora)</td>
-        </tr>
-        <tr>
-            <td>Cargo:</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Firma:</td>
-            <td></td>
-        </tr>
-    </table>
-
-</body>
+  </head>
+  <body>
+    <main class="container">
+      <section class="first_section">
+        <article class="fs_one">
+          <div class="fs_one_one">
+            <img src="./img/Quick_logo.png" alt="" />
+          </div>
+          <div class="fs_one_two">
+            <span>Nit. 8301247785 </span>
+          </div>
+        </article>
+        <article class="fs_two">
+          <div class="fs_two_one">
+            <div>
+              <span>MOVIMIENTO</span>
+              <span>983027</span>
+            </div>
+            <div>
+              <span>CAJA</span>
+            </div>
+          </div>
+          <div class="fs_two_two">
+            <div>
+              <span>VALE</span>
+              <span>No. 0102014141</span>
+              <span>FECHA DE</span>
+              <span>17/09/2024 </span>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="second_section">
+        <article class="row row_one">
+            <div class="row_one_one">
+                <span>EMPRESA:</span>
+                <span>QUICK HELP S.A.S</span>
+            </div>
+            <div class="row_one_two">
+                <span>OFICINA:</span>
+                <span>CARTAGENA</span>
+            </div>
+        </article>
+        <article class="row row_two">
+            <div class="row_two_one">
+                <span>BENEFICIARIO:</span>
+                <span>CEDULA - 79001516</span>
+            </div>
+            <div class="row_two_two">
+                <span>DELFIN CORTES MAHECHA</span>
+            </div>
+        </article>
+        <article class="row row_three">
+            <div class="row_three_one">
+                <span>BENEFICIARIO:</span>
+                <span>CEDULA - 79001516</span>
+            </div>
+            <div class="row_three_two">
+                <span>DELFIN CORTES MAHECHA</span>
+            </div>
+            <div class="row_three_three">
+                <span>MANIFIESTO: </span>
+                <span>0102014055</span>
+            </div>
+        </article>
+        <article class="row row_fourth">
+            <div class="row_fourth_one">
+                <span>DESCRIPCION:</span>
+                <span>CXD//8584733/// CARTAGENA//BOGOTA UNIDAD 40"//DO: 35300 // OC FTX008598 // IFTX2408056 // SAPPIx</span>
+        </article>
+        <article class="row row_five">
+            <table>
+                <tr>
+                    <th><strong>CUENTA</strong></th>
+                    <th><strong>CENTRO</strong></th>
+                    <th><strong>DOCUMENTO</strong></th>
+                    <th><strong>TERCERO</strong></th>
+                    <th><strong>CONCEPTO</strong></th>
+                    <th><strong>DEBITO</strong></th>
+                    <th><strong>CREDITO</strong></th>
+                </tr>
+                <tr>
+                    <td>11051017</td>
+                    <td>02</td>
+                    <td>CEDULA - 79001516</td>
+                    <td>DELFIN CORTES MAHECHA</td>
+                    <td>CXD///8584733///</td>
+                    <td></td>
+                    <td>3.360.000</td>
+                </tr>
+                <tr>
+                    <td>13300502</td>
+                    <td>02</td>
+                    <td>CEDULA - 79001516</td>
+                    <td>DELFIN CORTES MAHECHA</td>
+                    <td>CXD///8584733///</td>
+                    <td>3.360.000</td>
+                    <td></td>
+                </tr>
+            </table>
+        </article>
+      </section>
+      <section class="third_section">
+        <article class="column column_one">
+            <div>
+                <span>ELABORO</span>
+                <span>JENK SARQUIS PISCIOTTI</span>
+            </div>
+        </article>
+        <article class="column column_two">
+            <div>
+                <span>REVISO</span>
+            </div>
+        </article>
+        <article class="column column_three">
+            <div class="column_three_one">
+                <span>FIRMA</span>
+            </div>
+            <div class="column_three_two">
+                <div></div>
+                <span>C.C. O NIT</span>
+            </div>
+        </article>
+      </section>
+      <section class="fourth_section">
+        <article class="column column_one">
+            <div>
+                <span>VECES IMPRESO</span>
+                
+            </div>
+        </article>
+        <article class="column column_two">
+            <div>
+                <span>FECHA DE IMPRESION</span>
+                <span>2024-09-17</span>
+            </div>
+        </article>
+        <article class="column column_three">
+            <div class="column_three_two">
+                <span>HORA DE IMPRESION</span>
+                <span>5.37 PM</span>
+            </div>
+        </article>
+      </section>
+      <section class="five_section">
+        <article>
+            <p>
+                El abajo firmate acepta libre y voluntariamente que en caso de anulacion del documento posterior al pago,debera realizar el
+reintegro a la compañia, de lo contrario,se realizara el descuento por nomina de los saldos anteriormente mencionados.
+            </p>
+        </article>
+      </section>
+      <section class="six_section">
+        <article class="ss_row">
+            <div class="ss_row_one">
+                <span>Nombre y Apellido:</span>
+                <span>(Quien elabora)</span>
+            </div>
+            <div class="line_one"></div>
+        </article>
+        <article class="ss_row">
+            <div class="ss_row_two">
+                <span>Cargo:</span>
+                
+            </div>
+            <div class="line"></div>
+        </article>
+        <article class="ss_row">
+            <div class="ss_row_two">
+                <span>Firma:</span>
+                
+            </div>
+            <div class="line"></div>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
