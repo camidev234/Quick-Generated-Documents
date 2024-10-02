@@ -4,253 +4,246 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Remesa</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        font-size: 12px;
-        margin: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-      }
+<style>
+  @page {
+    size: landscape;
+  }
 
-      .first_cons {
-        width: 94%;
-      }
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 
-      .first_section {
-        display: flex;
-        height: 140px;
-        /* border: 1px solid black; */
-      }
+  .first_cons {
+    width: 94%;
+  }
 
-      .first_section .logos {
-        display: flex;
-        width: 50%;
-        height: 100%;
-      }
+  .first_section {
+    display: flex;
+    height: 140px;
+  }
 
-      .first_section .logos .logo_one {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+  .first_section .logos {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 1; /* Asegurar que las imágenes no sean cubiertas */
+  }
 
-      .logo_one img {
-        width: 90%;
-        height: 90%;
-        object-fit: contain;
-      }
+  .first_section .logos .logo_one,
+  .first_section .logos .logo_two {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-      .first_section .logos .logo_two {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+  .logo_one img,
+  .logo_two img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+  }
 
-      .logo_two img {
-        width: 90%;
-        height: 90%;
-        object-fit: contain;
-      }
+  .first_section .info {
+    display: flex;
+    width: 50%;
+    height: 100%;
+  }
 
-      .first_section .info {
-        display: flex;
-        width: 50%;
-        height: 100%;
-      }
+  .info_one {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 10px;
+  }
 
-      .info_one {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* align-items: center; */
-        gap: 10px;
-        font-weight: bold;
-        font-size: 15px;
-      }
+  .info_two {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    gap: 10px;
+    font-weight: bold;
+  }
 
-      .info_two {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 19px;
-        gap: 10px;
-        font-weight: bold;
-      }
+  .second_section {
+    width: 100%;
+  }
 
-      .second_section {
-        /* background-color: aqua; */
-        width: 100%;
-        /* border: 1px solid black; */
-      }
+  .first_row {
+    width: 100%;
+    display: flex;
+  }
 
-      .first_row {
-        width: 100%;
-        display: flex;
-      }
+  .third_section {
+    width: 100%;
+    display: flex;
+  }
 
-      .third_section {
-        width: 100%;
-        /* background-color: tomato; */
-        display: flex;
-        /* border: 1px solid black; */
-      }
+  .third_section .column_one {
+    width: 40%;
+  }
 
-      .third_section .column_one {
-        width: 40%;
-      }
+  .third_section .column_two {
+    width: 25%;
+  }
 
-      .third_section .column_two {
-        width: 25%;
-      }
+  .third_section .column_three {
+    width: 35%;
+  }
 
-      .third_section .column_three {
-        width: 35%;
-      }
+  .fourth_section {
+    width: 100%;
+  }
 
-      .fourth_section {
-        width: 100%;
-      }
+  /* Tabla ajustada para que no sobresalga */
+  table, .table_two {
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    table-layout: fixed; /* Distribuye las celdas uniformemente */
+    margin-bottom: 20px; /* Espacio entre la tabla y el siguiente elemento */
+  }
 
-    
+  th, td {
+    border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+    word-wrap: break-word; /* El texto largo se ajusta sin desbordarse */
+  }
 
-      table, .table_two {
-        width: 100%;
-        border-collapse: collapse;
-      }
-      
+  .table_two .tt_th {
+    text-align: center;
+    min-width: 130px;
+  }
 
-      .table_two .tt_th {
-        text-align: center;
-        min-width: 130px;
-      }
+  .table_two tr td {
+    font-size: 9px;
+  }
 
-      .table_two tr td {
-        font-size: 10.5px;
-      }
+  .content_table_two div {
+    text-align: center;
+  }
 
-      .content_table_two div {
-        text-align: center;
-      }
+  .six_section {
+    width: 100%; /* Se asegura de que el ancho no sobresalga */
+    border: 1px solid black;
+  }
 
-      .six_section {
-        width: 99.8%;
-        /* background-color: aqua; */
-        border: 1px solid black;
-      }
+  .ss_text {
+    padding: 8px;
+  }
 
-      .ss_text {
-        padding: 10px;
-      }
+  .seventh_section {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    border: 1px solid black;
+  }
 
-      .seventh_section {
-        width: 100%;
-        height: 75px;
-        display: flex;
-        border: 1px solid black;
-      }
+  .s_one {
+    width: 45%;
+    height: 100%;
+  }
 
-      .s_one {
-        width: 45%;
-        height: 100%;
-      }
+  .s_one div:first-child {
+    width: 100%;
+    height: 70%;
+  }
 
-      .s_one div:first-child {
-        /* background-color: aqua; */
-        width: 100%;
-        height: 70%;
-      }
+  .s_two {
+    width: 55%;
+    height: 100%;
+    border-left: 1px solid black;
+  }
 
-      .s_two {
-        width: 55%;
-        height: 100%;
-        /* background-color: blueviolet; */
-        border-left: 1px solid black;
-      }
+  .s_one div:last-child {
+    width: 100%;
+    height: 30%;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 
-      .s_one div:last-child {
-        width: 100%;
-        height: 30%;
-        /* background-color: brown; */
-        border-top: 1px solid black;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
+  .s_one span {
+    padding-right: 30px;
+  }
 
-      .s_one span {
-        padding-right: 35px;
-      }
+  .s_two div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 5px;
+  }
 
-      .s_two div {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        /* padding: 4px 0 34px 0; */
-        padding-left:  5px;
-      }
+  .logo {
+    text-align: left;
+    padding: 8px;
+  }
 
-      th,
-      td {
-        border: 1px solid black;
-        padding: 5px;
-        text-align: left;
-      }
+  .header-info {
+    text-align: right;
+    padding: 8px;
+  }
 
-      .logo {
-        text-align: left;
-        padding: 10px;
-      }
-      .header-info {
-        text-align: right;
-        padding: 10px;
-      }
-      .title {
-        text-align: center;
-        font-weight: bold;
-        font-size: 14px;
-      }
-      .observaciones {
-        text-align: left;
-        font-size: 10px;
-      }
-      .nota {
-        font-size: 10px;
-        text-align: left;
-      }
+  .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+  }
 
-      .important_info {
-        font-size: 10px;
-        text-align: left;
-        font-weight: bold;
-      }
+  .observaciones {
+    text-align: left;
+    font-size: 9px;
+  }
 
-    </style>
+  .nota {
+    font-size: 8px;
+    text-align: left;
+  }
+
+  .important_info {
+    font-size: 9px;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  /* Asegurar que las tablas no se sobrepongan con imágenes */
+  .table-section {
+    position: relative;
+    z-index: 1;
+  }
+</style>
   </head>
   <body>
     <section class="first_cons">
       <section class="first_section">
         <article class="logos">
           <div class="logo_one">
-            <img src="./img/Quick_logo.png" alt="" />
+            <img src="https://minquick.s3.us-west-2.amazonaws.com/Images_pdf/logoquick.jpeg" alt="" />
           </div>
           <div class="logo_two">
             <img
-              src="./img/nuevo_logo_supertransporte_3_0-removebg-preview.png"
+              src="https://minquick.s3.us-west-2.amazonaws.com/Images_pdf/superTransporte.jpeg"
               alt=""
             />
           </div>
@@ -443,11 +436,11 @@
         <section class="first_section">
           <article class="logos">
             <div class="logo_one">
-              <img src="./img/Quick_logo.png" alt="" />
+              <img src="https://minquick.s3.us-west-2.amazonaws.com/Images_pdf/logoquick.jpeg" alt="" />
             </div>
             <div class="logo_two">
               <img
-                src="./img/nuevo_logo_supertransporte_3_0-removebg-preview.png"
+                src="https://minquick.s3.us-west-2.amazonaws.com/Images_pdf/superTransporte.jpeg"
                 alt=""
               />
             </div>
@@ -640,11 +633,11 @@
         <section class="first_section">
           <article class="logos">
             <div class="logo_one">
-              <img src="./img/Quick_logo.png" alt="" />
+              <img src="https://minquick.s3.us-west-2.amazonaws.com/Images_pdf/logoquick.jpeg" alt="" />
             </div>
             <div class="logo_two">
               <img
-                src="./img/nuevo_logo_supertransporte_3_0-removebg-preview.png"
+                src="https://minquick.s3.us-west-2.amazonaws.com/Images_pdf/superTransporte.jpeg"
                 alt=""
               />
             </div>
